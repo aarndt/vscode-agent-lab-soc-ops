@@ -4,26 +4,38 @@ interface StartScreenProps {
 
 export function StartScreen({ onStart }: StartScreenProps) {
   return (
-    <div className="flex flex-col items-center justify-center min-h-full p-6 bg-gray-50">
-      <div className="text-center max-w-sm">
-        <h1 className="text-4xl font-bold text-gray-900 mb-2">Soc Ops</h1>
-        <p className="text-lg text-gray-600 mb-8">Social Bingo</p>
+    <div className="flex flex-col items-center justify-center min-h-full p-6 bg-screen-dark pixel-stars relative overflow-hidden">
+      <div className="text-center max-w-sm relative z-10">
+        {/* Arcade Title */}
+        <div className="mb-8">
+          <h1 className="text-3xl md:text-5xl font-bold text-arcade-pink neon-glow mb-2 tracking-wider">
+            SOC OPS
+          </h1>
+          <p className="text-xs md:text-sm text-arcade-cyan tracking-widest">SOCIAL BINGO</p>
+        </div>
         
-        <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 mb-8">
-          <h2 className="font-semibold text-gray-800 mb-3">How to play</h2>
-          <ul className="text-left text-gray-600 text-sm space-y-2">
-            <li>• Find people who match the questions</li>
-            <li>• Tap a square when you find a match</li>
-            <li>• Get 5 in a row to win!</li>
+        {/* Instructions Panel - Arcade Style */}
+        <div className="bg-cabinet-base border-4 border-arcade-purple p-4 mb-8 shadow-[0_0_30px_rgba(160,32,240,0.4)]">
+          <h2 className="text-[0.6rem] text-arcade-yellow mb-3 tracking-wider">HOW TO PLAY</h2>
+          <ul className="text-left text-arcade-cyan text-[0.5rem] space-y-2 leading-relaxed">
+            <li>▸ FIND PEOPLE WHO MATCH</li>
+            <li>▸ TAP SQUARE = MARK IT</li>
+            <li>▸ GET 5 IN A ROW = WIN!</li>
           </ul>
         </div>
 
+        {/* Insert Coin Button */}
         <button
           onClick={onStart}
-          className="w-full bg-accent text-white font-semibold py-4 px-8 rounded-lg text-lg active:bg-accent-light transition-colors"
+          className="w-full bg-arcade-pink text-white py-4 px-8 text-sm font-bold tracking-wider border-4 border-arcade-orange arcade-btn shadow-[0_0_30px_rgba(255,16,240,0.6)] hover:shadow-[0_0_40px_rgba(255,16,240,0.8)] uppercase"
         >
-          Start Game
+          <span className="pulse-glow">▶ INSERT COIN ◀</span>
         </button>
+        
+        {/* Credit Display */}
+        <div className="mt-4 text-coin-gold text-[0.5rem] tracking-wider blink">
+          CREDITS: ∞
+        </div>
       </div>
     </div>
   );
