@@ -64,6 +64,7 @@ Social bingo game for in-person mixers: tap squares matching people, get 5-in-a-
 - **Cabinet frame**: 8px borders, corner screw decorations, coin slot detail, neon box-shadow glow
 - **Screen bezel**: Nested border frames, `scanlines` overlay (horizontal lines + animated sweep), dark inset background
 
+
 **Animations** (respect `prefers-reduced-motion`):
 - `pulse-glow`: 1.5s opacity pulse for buttons and lights
 - `blink`: 1s step-end infinite for credit display
