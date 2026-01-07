@@ -25,7 +25,7 @@ export function StartScreen({ onStart }: StartScreenProps) {
             </div>
             
             {/* Instructions Panel - Arcade Style */}
-            <div className="bg-cabinet-base border-4 border-arcade-purple p-4 mb-8 shadow-[0_0_20px_rgba(160,32,240,0.3)] shadow-[inset_0_2px_8px_rgba(0,0,0,0.5)]">
+            <div className="bg-cabinet-base border-4 border-arcade-purple p-4 mb-8 shadow-[0_0_20px_rgba(160,32,240,0.3),inset_0_2px_8px_rgba(0,0,0,0.5)]">
               <h2 className="text-[0.6rem] text-arcade-yellow mb-3 tracking-wider">HOW TO PLAY</h2>
               <ul className="text-left text-arcade-cyan text-[0.6rem] space-y-2 leading-relaxed">
                 <li>▸ FIND PEOPLE WHO MATCH</li>
