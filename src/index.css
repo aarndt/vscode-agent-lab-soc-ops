@@ -140,11 +140,22 @@ body {
   animation: twinkle 3s ease-in-out infinite;
 }
 
+/* Marquee Scroll Animation */
+@keyframes marquee-scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.marquee-scroll {
+  animation: marquee-scroll 25s linear infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .scanlines::after,
   .pulse-glow,
   .blink,
-  .pixel-stars {
+  .pixel-stars,
+  .marquee-scroll {
     animation: none;
   }
   .arcade-btn:active {
