@@ -24,7 +24,7 @@ function MiniSquare({ text, isMarked, isFreeSpace }: MiniSquareProps) {
 
   return (
     <div className={`${baseClasses} ${stateClasses} ${freeSpaceClasses}`}>
-      <span className="break-words hyphens-auto px-0.5 line-clamp-2">{text}</span>
+      <span className="wrap-break-word hyphens-auto px-0.5 line-clamp-2">{text}</span>
       {isMarked && !isFreeSpace && (
         <span className="absolute top-0.5 right-0.5 text-cabinet-dark text-xs font-black">★</span>
       )}
@@ -106,7 +106,7 @@ export function StartScreen({ onStart }: StartScreenProps) {
           onClick={onStart}
           className="w-full bg-arcade-pink text-white py-4 px-8 text-xs md:text-sm font-bold tracking-wider border-4 border-arcade-orange arcade-btn shadow-[0_0_30px_rgba(255,16,240,0.6)] hover:shadow-[0_0_40px_rgba(255,16,240,0.8)] uppercase"
         >
-          <span className="pulse-glow">▶ INSERT COIN ◀</span>
+          <span className="pulse-glow">▶ START GAME ◀</span>
         </button>
 
         {/* Credit Display */}
