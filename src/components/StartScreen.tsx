@@ -24,7 +24,7 @@ function MiniSquare({ text, isMarked, isFreeSpace }: MiniSquareProps) {
 
   return (
     <div className={`${baseClasses} ${stateClasses} ${freeSpaceClasses}`}>
-      <span className="wrap-break-word hyphens-auto px-0.5 line-clamp-2">{text}</span>
+      <span className="break-words hyphens-auto px-0.5 line-clamp-2">{text}</span>
       {isMarked && !isFreeSpace && (
         <span className="absolute top-0.5 right-0.5 text-cabinet-dark text-xs font-black">★</span>
       )}
