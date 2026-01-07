@@ -5,7 +5,7 @@ interface StartScreenProps {
 }
 
 export function StartScreen({ onStart }: StartScreenProps) {
-  // Get sample questions for marquee (exclude FREE_SPACE if present)
+  // Get sample questions for marquee (FREE_SPACE is a separate export, not in questions array)
   const sampleQuestions = questions.slice(0, 8);
   
   return (
